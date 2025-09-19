@@ -17,3 +17,23 @@ C:\Users\Kalevala\source\repos\stickynotes\obj\Debug\net5.0-windows\stickynotes.
 C:\Users\Kalevala\source\repos\stickynotes\obj\Debug\net5.0-windows\stickynotes.genruntimeconfig.cache
 C:\Users\Kalevala\source\repos\stickynotes\obj\Debug\net5.0-windows\stickynotes.stickyNotes.resources
 C:\Users\Kalevala\source\repos\stickynotes\obj\Debug\net5.0-windows\stickynotes.Properties.Resources.resources
+C:\Program Files\GAM\stickynotes\bin\Debug\net5.0-windows\stickynotes.exe
+C:\Program Files\GAM\stickynotes\bin\Debug\net5.0-windows\stickynotes.deps.json
+C:\Program Files\GAM\stickynotes\bin\Debug\net5.0-windows\stickynotes.runtimeconfig.json
+C:\Program Files\GAM\stickynotes\bin\Debug\net5.0-windows\stickynotes.runtimeconfig.dev.json
+C:\Program Files\GAM\stickynotes\bin\Debug\net5.0-windows\stickynotes.dll
+C:\Program Files\GAM\stickynotes\bin\Debug\net5.0-windows\stickynotes.pdb
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.csproj.AssemblyReference.cache
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.Properties.Resources.resources
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.csproj.GenerateResource.cache
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.AssemblyInfoInputs.cache
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.AssemblyInfo.cs
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.csproj.CoreCompileInputs.cache
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.sourcelink.json
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.dll
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\refint\stickynotes.dll
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.pdb
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.genruntimeconfig.cache
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\ref\stickynotes.dll
+C:\Program Files\GAM\stickynotes\obj\Debug\net5.0-windows\stickynotes.StickyNoteForm.resources
