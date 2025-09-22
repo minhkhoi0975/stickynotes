@@ -133,6 +133,22 @@ namespace stickynotes
         {
             var selectionStart = textboxNote.SelectionStart;
             var selectionLength = textboxNote.SelectionLength;
+
+            if (selectionLength == 0)
+            {
+                Font currentDefaultFont = textboxNote.Font;
+                if (currentDefaultFont.Bold)
+                {
+                    textboxNote.Font = new Font(currentDefaultFont, currentDefaultFont.Style & ~FontStyle.Bold);
+                }
+                else
+                {
+                    textboxNote.Font = new Font(currentDefaultFont, currentDefaultFont.Style | FontStyle.Bold);
+                }
+
+                return;
+            }
+
             for (int i = 0; i < selectionLength; i++)
             {
                 textboxNote.Select(selectionStart + i, 1);
@@ -145,6 +161,7 @@ namespace stickynotes
                     textboxNote.SelectionFont = new Font(textboxNote.SelectionFont, textboxNote.SelectionFont.Style | FontStyle.Bold);
                 }
             }
+
             textboxNote.SelectionStart = selectionStart;
             textboxNote.SelectionLength = selectionLength;
         }
@@ -153,6 +170,21 @@ namespace stickynotes
         {
             var selectionStart = textboxNote.SelectionStart;
             var selectionLength = textboxNote.SelectionLength;
+
+            if (selectionLength == 0)
+            {
+                Font currentDefaultFont = textboxNote.Font;
+                if (currentDefaultFont.Italic)
+                {
+                    textboxNote.Font = new Font(currentDefaultFont, currentDefaultFont.Style & ~FontStyle.Italic);
+                }
+                else
+                {
+                    textboxNote.Font = new Font(currentDefaultFont, currentDefaultFont.Style | FontStyle.Italic);
+                }
+
+                return;
+            }
 
             for (int i = 0; i < selectionLength; i++)
             {
@@ -172,53 +204,80 @@ namespace stickynotes
         }
         private void UnderlineButton_Clicked(object sender, EventArgs e)
         {
-            var sel = this.textboxNote.SelectionStart;
-            var selLen = this.textboxNote.SelectionLength;
-            for (int i = 0; i < selLen; i++)
+            var selectionStart = textboxNote.SelectionStart;
+            var selectionLength = textboxNote.SelectionLength;
+
+            if (selectionLength == 0)
             {
-                this.textboxNote.Select(sel + i, 1);
-                if (this.textboxNote.SelectionFont.Underline)
+                Font currentDefaultFont = textboxNote.Font;
+                if (currentDefaultFont.Underline)
                 {
-                    this.textboxNote.SelectionFont = new Font(this.textboxNote.SelectionFont, this.textboxNote.SelectionFont.Style & ~FontStyle.Underline);
+                    textboxNote.Font = new Font(currentDefaultFont, currentDefaultFont.Style & ~FontStyle.Underline);
                 }
                 else
                 {
-                    this.textboxNote.SelectionFont = new Font(this.textboxNote.SelectionFont, this.textboxNote.SelectionFont.Style | FontStyle.Underline);
+                    textboxNote.Font = new Font(currentDefaultFont, currentDefaultFont.Style | FontStyle.Underline);
+                }
+
+                return;
+            }
+
+            for (int i = 0; i < selectionLength; i++)
+            {
+                textboxNote.Select(selectionStart + i, 1);
+                if (textboxNote.SelectionFont.Underline)
+                {
+                    textboxNote.SelectionFont = new Font(textboxNote.SelectionFont, textboxNote.SelectionFont.Style & ~FontStyle.Underline);
+                }
+                else
+                {
+                    textboxNote.SelectionFont = new Font(textboxNote.SelectionFont, textboxNote.SelectionFont.Style | FontStyle.Underline);
                 }
             }
-            this.textboxNote.SelectionStart = sel;
-            this.textboxNote.SelectionLength = selLen;
+
+            textboxNote.SelectionStart = selectionStart;
+            textboxNote.SelectionLength = selectionLength;
         }
         private void StrikeButton_Clicked(object sender, EventArgs e)
         {
-            var sel = this.textboxNote.SelectionStart;
-            var selLen = this.textboxNote.SelectionLength;
-            for (int i = 0; i < selLen; i++)
+            var selectionStart = textboxNote.SelectionStart;
+            var selectionLength = textboxNote.SelectionLength;
+
+            if (selectionLength == 0)
             {
-                this.textboxNote.Select(sel + i, 1);
-                if (this.textboxNote.SelectionFont.Strikeout)
+                Font currentDefaultFont = textboxNote.Font;
+                if (currentDefaultFont.Strikeout)
                 {
-                    this.textboxNote.SelectionFont = new Font(this.textboxNote.SelectionFont, this.textboxNote.SelectionFont.Style & ~FontStyle.Strikeout);
+                    textboxNote.Font = new Font(currentDefaultFont, currentDefaultFont.Style & ~FontStyle.Strikeout);
                 }
                 else
                 {
-                    this.textboxNote.SelectionFont = new Font(this.textboxNote.SelectionFont, this.textboxNote.SelectionFont.Style | FontStyle.Strikeout);
+                    textboxNote.Font = new Font(currentDefaultFont, currentDefaultFont.Style | FontStyle.Strikeout);
                 }
-            }
-            this.textboxNote.SelectionStart = sel;
-            this.textboxNote.SelectionLength = selLen;
-        }
-        private void BulletButton_Clicked(object sender, EventArgs e)
-        {
-            if (this.textboxNote.SelectionBullet)
-            {
-                textboxNote.SelectionBullet = false;
-            }
-            else
-            {
-                textboxNote.SelectionBullet = true;
+
+                return;
             }
 
+            for (int i = 0; i < selectionLength; i++)
+            {
+                textboxNote.Select(selectionStart + i, 1);
+                if (textboxNote.SelectionFont.Strikeout)
+                {
+                    textboxNote.SelectionFont = new Font(textboxNote.SelectionFont, textboxNote.SelectionFont.Style & ~FontStyle.Strikeout);
+                }
+                else
+                {
+                    textboxNote.SelectionFont = new Font(textboxNote.SelectionFont, textboxNote.SelectionFont.Style | FontStyle.Strikeout);
+                }
+            }
+
+            textboxNote.SelectionStart = selectionStart;
+            textboxNote.SelectionLength = selectionLength;
+        }
+
+        private void BulletButton_Clicked(object sender, EventArgs e)
+        {
+            textboxNote.SelectionBullet = !textboxNote.SelectionBullet;
         }
 
 #endregion
